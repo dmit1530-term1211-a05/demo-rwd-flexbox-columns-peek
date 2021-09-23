@@ -1,0 +1,59 @@
+body {
+    color: #fff;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 16px;
+}
+
+h2 {
+    background-color: #008ecc;
+    font-size: 24px;
+    padding: 8px 16px;
+}
+
+.item {
+    border: 1px solid #fff;
+    margin: 0 16px 16px;
+}
+
+.content {
+    padding: 16px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: wrap column;
+    /** because we set display: flex, we need to add the column value to force the elements to stack for small screens **/
+}
+
+.col {
+    /** set your columns to take up 100% of the available width **/
+    width: 100%;
+}
+
+.item {
+    /** allows the card take up all the additional space within the column **/
+    width: 100%;
+}
+
+/** responsive media query **/
+@media screen and (min-width: 650px) {
+    /** when we want to change style, layout, selector, etc. we only bring forward what is needed to be changed */
+
+    .flex-container {
+        flex-flow: wrap row;
+        /** now that our screen is larger - we can take our content and place it rows **/
+    }
+
+    .col {
+        /** resets defined width back to its initial width when we add the property value pair display: flex; **/
+        /* add display: flex to create rows of content */
+        display: flex;
+    }
+
+}
